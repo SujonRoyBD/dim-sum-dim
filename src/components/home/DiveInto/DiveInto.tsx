@@ -4,7 +4,7 @@ const DiveInto = () => {
   return (
     <div className='bg-[url("/assets/devinto.png")] bg-cover bg-center text-white py-20 px-6'>
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold leading-snug mb-6">
+        <h2 className="text-3xl md:text-3xl font-bold leading-snug mb-6 uppercase">
           Dive Into the World of Sumptuous <br /> Sum Dim Sum
         </h2>
         <p className="text-lg md:text-xl leading-relaxed">

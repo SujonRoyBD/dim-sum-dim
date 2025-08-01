@@ -1,29 +1,131 @@
-import React from 'react';
-import { FaFacebookF } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { RiTwitterXLine } from "react-icons/ri";
-const ContactUs = () => {
-    return (
-        <div>
-            <div className='grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-2'>
-                <div className='w-'>
+"use client"
 
+import { useState } from "react"
+import Image from "next/image"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Card } from "@/components/ui/card"
+import { Facebook, Linkedin, X } from "lucide-react"
+
+export default function ContactUs() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  })
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { id, value } = e.target
+    setFormData(prev => ({ ...prev, [id]: value }))
+  }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    console.log("Form Data:", formData)
+    // Add fetch/axios API logic here if needed
+  }
+
+  return (
+    <Card className="w-full container mx-auto rounded-xl overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        {/* Left Section: Contact Form */}
+        <div className="relative p-8 md:p-12 flex flex-col justify-center items-start text-white">
+          <Image
+            src="/assets/contactFrom.png"
+            alt="Background image of food"
+            fill
+            className="absolute inset-0 object-cover blur-sm"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/50" />
+          <div className="relative z-10 w-full">
+            <h2 className="text-3xl font-bold mb-2">Just Say Hi !</h2>
+            <p className="text-sm mb-8">Tell us more about you and well contact you soon.</p>
+
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name">Name</label>
+                  <Input
+                    id="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    className="bg-transparent px-0 pb-2 pt-6 text-white"
+                  />
                 </div>
-                <div className='w-2/4 h-auto lg:h-[746px] border-2 border-red-500 bg-[url("/assets/contactusFrom2.png")] bg-contain bg-no-repeat bg-center px-6'>
-                <h3 className='font-poppins font-semibold text-[24px] leading-[150%] tracking-normal py-[20px] pt-[200px]'>Contact Information</h3>
-                <p className=' font-normal text-base leading-[150%] tracking-normal'>Maui, Hawaii, USA</p>
-                <p className=' font-normal text-base leading-[150%] tracking-normal'>Call us: +1234567890</p>
-                <p className=' font-normal text-base leading-[150%] tracking-normal'>Whatsapp: +1234567890</p>
-                <p className=' font-semibold text-xl leading-[150%] tracking-normal pt-[60px]'>Follow Us</p>
-                <div className='flex gap-3 py-[20px]'>
-                    <FaFacebookF />
-                    <FaLinkedinIn />
-                    <RiTwitterXLine />
+                <div>
+                  <label htmlFor="email">Email</label>
+                  <Input
+                    id="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="bg-transparent px-0 pb-2 pt-6 text-white"
+                  />
                 </div>
-                </div>
-            </div>
+              </div>
+              <div>
+                <label htmlFor="phone">Phone Number</label>
+                <Input
+                  id="phone"
+                  type="tel"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="bg-transparent px-0 pb-2 pt-6 text-white"
+                />
+              </div>
+              <div>
+                <label htmlFor="message">Type your message here</label>
+                <Textarea
+                  id="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  className="bg-transparent px-0 pb-2 pt-6 text-white"
+                />
+              </div>
+              <div className="flex justify-end">
+                <Button type="submit" className="bg-red-700 hover:bg-red-800 text-white py-3 text-lg">
+                  Submit <span className="ml-2">&rarr;</span>
+                </Button>
+              </div>
+            </form>
+          </div>
         </div>
-    );
-};
 
-export default ContactUs;
+        {/* Right Section: Contact Information */}
+        <div className="relative p-8 md:p-12 bg-[#FCE8E8] flex flex-col justify-between text-gray-800">
+          <Image
+            src="/assets/contactusFrom2.png"
+            alt="Cherry blossom tree illustration"
+            fill
+            className="absolute inset-0 object-contain object-bottom opacity-50"
+          />
+          <div className="relative z-10">
+            <h3 className="text-xl font-bold mb-4">Contact Information</h3>
+            <p className="text-sm mb-2">Maui, Hawaii, USA</p>
+            <p className="text-sm mb-2">Call us: +1234567890</p>
+            <p className="text-sm mb-8">Whatsapp: +1234567890</p>
+
+            <h3 className="text-xl font-bold mb-4">Follow Us</h3>
+            <div className="flex space-x-4">
+              <a href="#" aria-label="Facebook" className="text-gray-800 hover:text-gray-600">
+                <Facebook className="w-6 h-6" />
+              </a>
+              <a href="#" aria-label="LinkedIn" className="text-gray-800 hover:text-gray-600">
+                <Linkedin className="w-6 h-6" />
+              </a>
+              <a href="#" aria-label="X (formerly Twitter)" className="text-gray-800 hover:text-gray-600">
+                <X className="w-6 h-6" />
+              </a>
+            </div>
+          </div>
+          <div className="relative z-10 text-right mt-8">
+            <p className="text-4xl font-serif italic text-gray-600">Contact Us</p>
+          </div>
+        </div>
+      </div>
+    </Card>
+  )
+}

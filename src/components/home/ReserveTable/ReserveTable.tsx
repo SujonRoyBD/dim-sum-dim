@@ -1,16 +1,38 @@
+"use client"
+
+import { useState } from "react"
 import Image from "next/image"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 export default function ReserveTable() {
+  const [name, setName] = useState("")
+  const [guests, setGuests] = useState("1")
+  const [date, setDate] = useState("21-12-2024")
+  const [time, setTime] = useState("21:00")
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    console.log({
+      name,
+      guests,
+      date,
+      time,
+    })
+  }
+
   return (
     <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center min-h-screen p-4 md:p-8 lg:p-12 bg-white">
       {/* Left side: Image */}
       <div className="relative w-full max-w-md lg:w-3/4 aspect-[2/3] lg:aspect-auto lg:h-[600px] rounded-xl overflow-hidden mb-8 lg:mb-0 lg:mr-12">
-        {/* Red border element */}
-       
         <Image
           src="/assets/reserve.png"
           alt="reserve"
@@ -23,36 +45,33 @@ export default function ReserveTable() {
 
       {/* Right side: Form */}
       <div className="w-full max-w-xl lg:w-1/2">
-        <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6 leading-tight text-gray-900">
+        <h2 className="text-4xl md:text-2xl font-serif font-bold mb-6 leading-tight text-gray-900">
           RESERVE YOUR TABLE FOR AN AUTHENTIC SUM DIM SUM EXPERIENCE
         </h2>
         <p className="text-gray-700 mb-8 text-lg">
-          Dont miss the chance to savor the finest flavors of authentic dim sum in a warm and inviting atmosphere.
-          Whether it a special occasion, a family gathering, or a cozy dinner for two, our handcrafted dishes and
-          impeccable service make every moment memorable. Reserve your table now and let us take you on a culinary
-          journey filled with tradition, passion, and the joy of exceptional food. Your unforgettable dining experience
-          awaits!
+          Don&apos;t miss the chance to savor the finest flavors of authentic dim sum in a warm and inviting atmosphere.
+          Whether it&apos;s a special occasion, a family gathering, or a cozy dinner for two, our handcrafted dishes and
+          impeccable service make every moment memorable.
         </p>
 
-        <form className="space-y-6">
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {/* Your Name */}
+            {/* Name */}
             <div>
-              <Label htmlFor="name" className="sr-only">
-                Your Name
-              </Label>
+              <Label htmlFor="name" className="sr-only">Your Name</Label>
               <Input
                 id="name"
                 placeholder="Your Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="border-b border-t-0 border-l-0 border-r-0 border-gray-300 focus:border-primary focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none px-0 py-2 text-lg placeholder:text-gray-500"
               />
             </div>
-            {/* 1 Person */}
+
+            {/* Guests */}
             <div>
-              <Label htmlFor="guests" className="sr-only">
-                Number of Guests
-              </Label>
-              <Select defaultValue="1">
+              <Label htmlFor="guests" className="sr-only">Number of Guests</Label>
+              <Select value={guests} onValueChange={setGuests}>
                 <SelectTrigger
                   id="guests"
                   className="border-b border-t-0 border-l-0 border-r-0 border-gray-300 focus:border-primary focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none px-0 py-2 text-lg placeholder:text-gray-500"
@@ -69,12 +88,11 @@ export default function ReserveTable() {
                 </SelectContent>
               </Select>
             </div>
+
             {/* Date */}
             <div>
-              <Label htmlFor="date" className="sr-only">
-                Date
-              </Label>
-              <Select defaultValue="21-12-2024">
+              <Label htmlFor="date" className="sr-only">Date</Label>
+              <Select value={date} onValueChange={setDate}>
                 <SelectTrigger
                   id="date"
                   className="border-b border-t-0 border-l-0 border-r-0 border-gray-300 focus:border-primary focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none px-0 py-2 text-lg placeholder:text-gray-500"
@@ -88,12 +106,11 @@ export default function ReserveTable() {
                 </SelectContent>
               </Select>
             </div>
+
             {/* Time */}
             <div>
-              <Label htmlFor="time" className="sr-only">
-                Time
-              </Label>
-              <Select defaultValue="21:00">
+              <Label htmlFor="time" className="sr-only">Time</Label>
+              <Select value={time} onValueChange={setTime}>
                 <SelectTrigger
                   id="time"
                   className="border-b border-t-0 border-l-0 border-r-0 border-gray-300 focus:border-primary focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none px-0 py-2 text-lg placeholder:text-gray-500"
@@ -110,6 +127,7 @@ export default function ReserveTable() {
               </Select>
             </div>
           </div>
+
           <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white py-3 text-lg rounded-md">
             Book Now
           </Button>

@@ -39,7 +39,7 @@ const data: Item[] = [
 const OurStory = () => {
   return (
     <section className="py-20 ">
-      <div className="container mx-auto flex flex-col md:flex-row items-center gap-10 px-6">
+      <div className="container mx-auto flex flex-col md:flex-row items-center gap-10 px-6 pl-9">
         {/* Left Side - Text Content */}
         <div
           className="w-full md:w-[500px] bg-[#F7E7E8] lg:w-[1100px] bg-[url('/assets/storyBg.png')] bg-contain bg-no-repeat bg-center pt-9 px-6"

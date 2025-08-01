@@ -14,7 +14,7 @@ const config: Config = {
          DEFAULT: "16px",
           sm: "20px",
           md: "20px",
-          lg: "20px",
+          lg: "30px",
           xl: "20px",
       },
        screens: {
