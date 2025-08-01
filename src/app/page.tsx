@@ -1,6 +1,9 @@
 import Banner from "@/components/home/Banner/Banner";
+import ContactUs from "@/components/home/Contact-Us/ContactUs";
+import DiveInto from "@/components/home/DiveInto/DiveInto";
 import OurStory from "@/components/home/OurStory/OurStory";
-import TastTradition from "@/components/home/Tast-Traditon/TastTradition";
+import TalkTown from "@/components/home/Talk-Town/TalkTown";
+import TastTradition from "@/components/home/Taste-Traditon/TasteTradition";
 
 export default function Home() {
   return (
@@ -13,6 +16,15 @@ export default function Home() {
     </section>
     <section>
      <TastTradition/>
+    </section>
+    <section>
+     <DiveInto/>
+    </section>
+    <section>
+      <TalkTown/>
+    </section>
+    <section>
+      <ContactUs/>
     </section>
    </div>
   );

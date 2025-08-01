@@ -69,6 +69,13 @@ const TastTradition = () => {
           </div>
         </div>
       </div>
+      <div className='flex gap-[12px] pt-[60px] justify-center items-center'>
+       <div className="w-[10px] h-[10px] rotate-[-45deg] opacity-100 border border-[#E7B6B7] hover:bg-red-500 hover:w-[20px] hover:h-[20px]"></div>
+       <div className="w-[10px] h-[10px] rotate-[-45deg] opacity-100 border border-[#E7B6B7]"></div>
+       <div className="w-[10px] h-[10px] rotate-[-45deg] opacity-100 border border-[#E7B6B7]"></div>
+       <div className="w-[10px] h-[10px] rotate-[-45deg] opacity-100 border border-[#E7B6B7]"></div>
+
+      </div>
     </section>
   );
 };
