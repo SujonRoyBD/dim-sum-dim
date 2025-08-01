@@ -8,28 +8,28 @@ import TastTradition from "@/components/home/Taste-Traditon/TasteTradition";
 
 export default function Home() {
   return (
-   <div>
-    <section>
-      <Banner/>
-    </section>
-    <section>
-     <OurStory/>
-    </section>
-    <section>
-     <TastTradition/>
-    </section>
-    <section>
-     <DiveInto/>
-    </section>
-    <section>
-      <TalkTown/>
-    </section>
-    <section>
-      <ReserveTable/>
-    </section>
-    <section>
-      <ContactUs/>
-    </section>
-   </div>
+    <div>
+      <section>
+        <Banner />
+      </section>
+      <section>
+        <OurStory />
+      </section>
+      <section>
+        <TastTradition />
+      </section>
+      <section>
+        <DiveInto />
+      </section>
+      <section>
+        <TalkTown />
+      </section>
+      <section>
+        <ReserveTable />
+      </section>
+      <section>
+        <ContactUs />
+      </section>
+    </div>
   );
 }
