@@ -14,8 +14,8 @@ const config: Config = {
          DEFAULT: "16px",
           sm: "20px",
           md: "20px",
-          lg: "60px",
-          xl: "80px",
+          lg: "20px",
+          xl: "20px",
       },
        screens: {
         xs: "475px", // custom breakpoint

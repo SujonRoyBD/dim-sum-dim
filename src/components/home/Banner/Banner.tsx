@@ -11,7 +11,7 @@ const Banner = () => {
                 <p className='text-lg md:text-xl leading-relaxed'>
                     At Sum Dim Sum, we bring families and friends together over the timeless tradition of sharing delectable dishes. From our expertly crafted dim sum to our vibrant ambiance, every moment here is a celebration of taste and togetherness. Explore our menu, reserve your table, or order your favorites online today!
                 </p>
-                <div className='py-16'>
+                <div className='py-[60px]'>
                     <button className='flex items-center justify-center mx-auto gap-[8px] bg-[#B31217] px-[20px] py-[12px] rounded-lg'>Explore Our Menu <GoArrowRight className=''/></button>
                 </div>
              
