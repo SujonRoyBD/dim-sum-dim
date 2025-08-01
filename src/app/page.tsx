@@ -2,6 +2,7 @@ import Banner from "@/components/home/Banner/Banner";
 import ContactUs from "@/components/home/Contact-Us/ContactUs";
 import DiveInto from "@/components/home/DiveInto/DiveInto";
 import OurStory from "@/components/home/OurStory/OurStory";
+import ReserveTable from "@/components/home/ReserveTable/ReserveTable";
 import TalkTown from "@/components/home/Talk-Town/TalkTown";
 import TastTradition from "@/components/home/Taste-Traditon/TasteTradition";
 
@@ -22,6 +23,9 @@ export default function Home() {
     </section>
     <section>
       <TalkTown/>
+    </section>
+    <section>
+      <ReserveTable/>
     </section>
     <section>
       <ContactUs/>

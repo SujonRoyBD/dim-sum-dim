@@ -9,8 +9,8 @@ const ContactUs = () => {
                 <div className='w-'>
 
                 </div>
-                <div className='w-2/4 h-auto lg:h-[746px] border-2 border-red-500 bg-[url("/assets/contactusFrom2.png")] bg-cover bg-center px-6 '>
-                <h3 className='font-poppins font-semibold text-[24px] leading-[150%] tracking-normal py-[20px]'>Contact Information</h3>
+                <div className='w-2/4 h-auto lg:h-[746px] border-2 border-red-500 bg-[url("/assets/contactusFrom2.png")] bg-contain bg-no-repeat bg-center px-6'>
+                <h3 className='font-poppins font-semibold text-[24px] leading-[150%] tracking-normal py-[20px] pt-[200px]'>Contact Information</h3>
                 <p className=' font-normal text-base leading-[150%] tracking-normal'>Maui, Hawaii, USA</p>
                 <p className=' font-normal text-base leading-[150%] tracking-normal'>Call us: +1234567890</p>
                 <p className=' font-normal text-base leading-[150%] tracking-normal'>Whatsapp: +1234567890</p>
