@@ -5,7 +5,7 @@ const Banner = () => {
     return (
         <div className='bg-[url("/assets/heroSection.png")] bg-cover bg-center text-white py-20 px-6'>
             <div className='max-w-4xl mx-auto text-center'>
-                <h2 className='text-3xl md:text-3xl font-bold leading-snug mb-6 uppercase'>
+                <h2 className='font-cinzel text-3xl md:text-3xl font-bold leading-snug mb-6 uppercase'>
                     Welcome to Sum Dim Sum - Where <br /> Every Bite Tells a Story
                 </h2>
                 <p className='text-lg md:text-xl leading-relaxed'>

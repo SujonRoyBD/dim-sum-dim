@@ -1,21 +1,23 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/shared/Navbar/Navbar";
 import Footer from "@/components/shared/Footer/Footer";
 import UpperNavbar from "@/components/shared/UpperNavbar/UpperNavbar";
 import AppProvider from "@/components/provider/AppProvider";
 import { Toaster } from "@/components/ui/sonner";
+import { Cinzel_Decorative } from "next/font/google";
+import { Raleway } from "next/font/google";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-raleway",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const cinzel = Cinzel_Decorative({
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
+  variable: "--font-cinzel",
 });
 
 export const metadata: Metadata = {
@@ -31,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={` ${raleway.variable} ${cinzel.variable} antialiased`}
       >
         <AppProvider>
           <UpperNavbar />
