@@ -7,9 +7,8 @@ export default function Footer() {
     <footer className="bg-white py-8 px-4 md:px-6 lg:px-8">
       <div className="border-t border-b border-red-300 py-8">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-          {/* Contact Section */}
           <div className="flex flex-col items-center md:items-start space-y-4">
-            <h3 className="text-xl font-serif font-bold text-gray-800 uppercase tracking-wider">CONTACT</h3>
+            <h3 className="text-xl font-cinzel font-bold text-gray-800 uppercase tracking-wider">CONTACT</h3>
             <div className="flex items-center space-x-2 gap-[4px] text-gray-600">
               <Phone className="w-[24px] h-[24px] text-black" />
               <span>+1234567890</span>

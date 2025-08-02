@@ -45,7 +45,7 @@ const OurStory = () => {
           className="w-full md:w-[500px] bg-[#F7E7E8] lg:w-[1100px] bg-[url('/assets/storyBg.png')] bg-contain bg-no-repeat bg-center pt-9 px-6"
           style={{ minHeight: '300px', }} 
         >
-          <h3 className="text-3xl font-bold mb-4 ">Our Story</h3>
+          <h3 className="text-3xl font-bold mb-4 font-cinzel">Our Story</h3>
           <p className="text-base md:text-lg text-gray-800 leading-relaxed lg:pr-[300px] md:pr-[150px]">
             At Sum Dim Sum, we are a local Singaporean brand that prepares dim sum dishes with wholehearted dedication and passion. Our chefs use traditional techniques to craft our dishes, ensuring that they are of the highest quality. Come and experience our fresh and flavorful cuisine.
           </p>
