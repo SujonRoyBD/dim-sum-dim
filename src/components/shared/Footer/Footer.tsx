@@ -22,8 +22,6 @@ export default function Footer() {
               <span>example@example.com</span>
             </div>
           </div>
-
-          {/* Logo and Social Media Section */}
           <div className="flex flex-col items-center space-y-4">
             <Image
               src="/assets/footer-Logo.png"
@@ -48,8 +46,6 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-
-          {/* Navigation Links Section */}
           <nav className="flex flex-col items-center md:items-end space-y-2 text-gray-600">
             <Link href="#" className="hover:text-red-500">
               Home

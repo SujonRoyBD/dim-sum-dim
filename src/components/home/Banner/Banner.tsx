@@ -3,7 +3,7 @@ import React from 'react';
 import { GoArrowRight } from "react-icons/go";
 const Banner = () => {
     return (
-        <div className='bg-[url("/assets/heroSection.png")] bg-cover bg-center text-white py-20 px-6'>
+        <div className='bg-[url("/assets/heroSection.png")] bg-cover bg-center text-white py-16 md:py-12 lg:py-20 px-6'>
             <div className='max-w-4xl mx-auto text-center'>
                 <h2 className='font-cinzel text-3xl md:text-3xl font-bold leading-snug mb-6 uppercase'>
                     Welcome to Sum Dim Sum - Where <br /> Every Bite Tells a Story
@@ -16,7 +16,7 @@ const Banner = () => {
                 </div>
              
             </div>
-               <div className='lg:flex justify-end items-end container'>
+               <div className='flex justify-center md:justify-end items-end pl-0 md:pl-[90px] container'>
                     <Image src="/assets/bannerLogo.png"alt='banner-logo' width={174} height={174} className='rounded-full'/>
                 </div>
         </div>

@@ -39,8 +39,7 @@ const data: Item[] = [
 const OurStory = () => {
   return (
     <section className="py-20 ">
-      <div className="container mx-auto flex flex-col md:flex-row items-center gap-10 px-6 pl-9">
-        {/* Left Side - Text Content */}
+      <div className="container mx-auto flex flex-col md:flex-row items-center gap-10 px-12">
         <div
           className="w-full md:w-[500px] bg-[#F7E7E8] lg:w-[1100px] bg-[url('/assets/storyBg.png')] bg-contain bg-no-repeat bg-center pt-9 px-6"
           style={{ minHeight: '300px', }} 
@@ -56,9 +55,7 @@ const OurStory = () => {
             </button>
           </div>
         </div>
-
-        {/* Right Side - Image */}
-        <div className="w-full lg:w-[512px] md:w-[412px] h-[260px] lg:-ml-[400px] md:-ml-[200px] lg:mt-[160px] flex justify-center">
+        <div className="w-full lg:w-[512px] md:w-[412px] h-[260px] lg:-ml-[250px] md:-ml-[200px] lg:mt-[160px] flex justify-center">
           <Image
             src="/assets/ourStory.png"
             alt="Our Story"
@@ -68,9 +65,7 @@ const OurStory = () => {
           />
         </div>
       </div>
-
-      {/* Items Grid */}
-      <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 pt-[60px] px-6 text-center">
+      <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 pt-[60px] px-6 text-center">
         {data.map((item) => (
           <div key={item.id} className="flex flex-col items-center">
             <Image

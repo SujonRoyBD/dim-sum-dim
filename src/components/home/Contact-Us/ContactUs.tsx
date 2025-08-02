@@ -57,7 +57,7 @@ export default function ContactUs() {
 
   return (
     <Card className="w-full container mx-auto rounded-xl overflow-hidden">
-      <div className="grid grid-cols-1 md:grid-cols-2">
+      <div className="grid grid-cols-1 container md:grid-cols-1 lg:grid-cols-2 ">
         <div className="relative p-8 md:p-12 flex flex-col justify-center items-start text-white">
           <Image
             src="/assets/contactFrom.png"
@@ -73,62 +73,73 @@ export default function ContactUs() {
               Tell us more about you and well contact you soon.
             </p>
 
-            <form className="space-y-6" onSubmit={handleSubmit}>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name">Name</label>
-                  <Input
-                    id="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="bg-transparent px-0 pb-2 pt-6 text-white"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email">Email</label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="bg-transparent px-0 pb-2 pt-6 text-white"
-                  />
-                </div>
-              </div>
-              <div>
-                <label htmlFor="phoneNumber">Phone Number</label>
-                <Input
-                  id="phoneNumber"
-                  type="text"
-                  value={formData.phoneNumber}
-                  onChange={handleChange}
-                  className="bg-transparent px-0 pb-2 pt-6 text-white"
-                />
-              </div>
-              <div>
-                <label htmlFor="message">Type your message here</label>
-                <Textarea
-                  id="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="bg-transparent px-0 pb-2 pt-6 text-white"
-                />
-              </div>
-              <div className="flex justify-end">
-                <Button
-                  disabled={isPending}
-                  type="submit"
-                  className="bg-red-700 hover:bg-red-800 text-white py-3 text-lg"
-                >
-                  {isPending ? "Submitting..." : "Submit"}{" "}
-                  <span className="ml-2">&rarr;</span>
-                </Button>
-              </div>
-            </form>
+     <form className="space-y-6" onSubmit={handleSubmit}>
+  <div className="">
+    <div>
+      <label htmlFor="name" className="text-white text-sm">
+        Name
+      </label>
+      <Input
+        id="name"
+        value={formData.name}
+        onChange={handleChange}
+        className="bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 border-0 border-b border-b-white text-white shadow-none"
+      />
+    </div>
+
+  </div>
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2  gap-4">
+        <div>
+      <label htmlFor="email" className="text-white text-sm">
+        Email
+      </label>
+      <Input
+        id="email"
+        type="email"
+        value={formData.email}
+        onChange={handleChange}
+        className="bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0 border-0 border-b border-b-white  text-white w-[290px] md:w-[300px] lg:w-[250px]"
+      />
+    </div>
+    <div>
+      <label htmlFor="phoneNumber" className="text-white text-sm">
+      Phone Number
+    </label>
+    <Input
+      id="phoneNumber"
+      type="text"
+      value={formData.phoneNumber}
+      onChange={handleChange}
+      className="bg-transparent  focus-visible:ring-0 focus-visible:ring-offset-0 border-0 border-b border-b-white  text-white shadow-none w-[290px] md:w-[300px] lg:w-[250px]"
+    />
+    </div>
+    
+  </div>
+  <div>
+    <label htmlFor="message" className="text-white text-sm">
+      Type your message here
+    </label>
+    <Textarea
+      id="message"
+      value={formData.message}
+      onChange={handleChange}
+      className="bg-transparent  focus-visible:ring-0 focus-visible:ring-offset-0 border-0 border-b border-b-white  text-white shadow-none"
+    />
+  </div>
+  <div className="flex justify-end">
+    <Button
+      disabled={isPending}
+      type="submit"
+      className="bg-red-700 hover:bg-red-800 text-white py-3 text-lg"
+    >
+      {isPending ? "Submitting..." : "Submit"}{" "}
+      <span className="ml-2">&rarr;</span>
+    </Button>
+  </div>
+</form>
+
           </div>
         </div>
-
-        {/* Right Section: Contact Information */}
         <div className="relative p-8 md:p-12 bg-[#FCE8E8] flex flex-col justify-between text-gray-800">
           <Image
             src="/assets/contactusFrom2.png"
@@ -136,7 +147,7 @@ export default function ContactUs() {
             fill
             className="absolute inset-0 object-contain object-bottom opacity-50"
           />
-          <div className="relative z-10">
+          <div className="relative lg:pt-[100px]">
             <h3 className="text-xl font-bold mb-4">Contact Information</h3>
             <p className="text-sm mb-2">Maui, Hawaii, USA</p>
             <p className="text-sm mb-2">Call us: +1234567890</p>

@@ -22,9 +22,8 @@ export default function Navbar() {
   ]
 
   return (
-    <header className=" bg-[#0C0C0C]  sticky top-9 z-50 text-white py-4 px-6 md:px-8 lg:px-12">
+    <header className=" bg-[#0C0C0C]  sticky top-10 z-50 text-white py-4 px-6 md:px-8 lg:px-12">
       <nav className="flex items-center justify-between max-w-7xl mx-auto">
-        {/* Logo */}
         <Link href="/" className="flex flex-col items-center gap-1">
           <Image
             src="/assets/logo.png"
@@ -34,26 +33,20 @@ export default function Navbar() {
             className="h-10 w-auto"
           />
         </Link>
-
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-5 lg:gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               href={link.href}
-              className="text-sm font-medium hover:text-gray-300 transition-colors"
+              className="text-xs lg:text-sm font-medium hover:text-gray-300 transition-colors"
             >
               {link.name}
             </Link>
           ))}
         </div>
-
-        {/* Book a Table Button - Desktop */}
         <Button className="hidden md:inline-flex bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl px-6 py-2">
           Book a Table
         </Button>
-
-        {/* Mobile Menu */}
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>

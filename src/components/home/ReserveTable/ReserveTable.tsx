@@ -38,7 +38,7 @@ export default function ReserveTable() {
         },
         body: JSON.stringify({
           ...data,
-          numberOfGuests: Number(data.numberOfGuests), // Ensure number type
+          numberOfGuests: Number(data.numberOfGuests),
         }),
       }).then(async (res) => {
         if (!res.ok) {
@@ -51,7 +51,6 @@ export default function ReserveTable() {
       toast.success("Reservation created successfully", {
         description: data.message,
       });
-      // Reset form after successful submission
       setName("");
       setGuests(1);
       setDate("");
@@ -80,8 +79,6 @@ export default function ReserveTable() {
     };
     mutate(data);
   };
-
-  // Generate date options for the next 7 days
   const generateDateOptions = () => {
     const dates = [];
     const today = new Date();
@@ -104,8 +101,6 @@ export default function ReserveTable() {
     }
     return dates;
   };
-
-  // Time options in 1 hour increments from 5 PM to 10 PM
   const timeOptions = [
     "5:00 PM",
     "6:00 PM",
@@ -117,20 +112,18 @@ export default function ReserveTable() {
 
   return (
     <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center min-h-screen p-4 md:p-8 lg:p-12 bg-white">
-      {/* Left side: Image */}
-      <div className="relative w-full max-w-md lg:w-3/4 aspect-[2/3] lg:aspect-auto lg:h-[600px] rounded-xl overflow-hidden mb-8 lg:mb-0 lg:mr-12">
+      <div className="relative w-full  aspect-[2/3] lg:aspect-auto 
+     h-[350px] md:h-[500px] mt-4 lg:h-[500px] rounded-xl overflow-hidden mb-8 lg:mb-0 lg:mr-12 lg:w-[600px]">
         <Image
           src="/assets/reserve.png"
           alt="reserve"
           fill
-          className="object-cover rounded-xl z-10"
-          sizes="(max-width: 1024px) 100vw, 50vw"
+          className=" rounded-xl z-10 md:h-[400px] md:w-[900px] "
+          sizes="(max-width: 1124px) 100vw, 50vw"
           priority
         />
       </div>
-
-      {/* Right side: Form */}
-      <div className="w-full max-w-xl lg:w-1/2">
+      <div className="w-full max-w-xl lg:w-1/2 pt-8">
         <h2 className="font-cinzel text-4xl md:text-2xl font-bold mb-6 leading-tight text-gray-900">
           RESERVE YOUR TABLE FOR AN AUTHENTIC SUM DIM SUM EXPERIENCE
         </h2>
@@ -157,8 +150,6 @@ export default function ReserveTable() {
                 className="border-b border-t-0 border-l-0 border-r-0 border-gray-300 focus:border-primary focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none px-0 py-2 text-lg placeholder:text-gray-500"
               />
             </div>
-
-            {/* Guests */}
             <div>
               <Label htmlFor="numberOfGuests" className="sr-only">
                 Number of Guests
@@ -182,8 +173,6 @@ export default function ReserveTable() {
                 </SelectContent>
               </Select>
             </div>
-
-            {/* Date */}
             <div>
               <Label htmlFor="reservationDate" className="sr-only">
                 Date
@@ -193,13 +182,11 @@ export default function ReserveTable() {
                   id="reservationDate"
                   className="border-b border-t-0 border-l-0 border-r-0 border-gray-300 focus:border-primary focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none px-0 py-2 text-lg placeholder:text-gray-500"
                 >
-                  <SelectValue placeholder="Select a date" />
+                  <SelectValue placeholder="21-12-2024" />
                 </SelectTrigger>
                 <SelectContent>{generateDateOptions()}</SelectContent>
               </Select>
             </div>
-
-            {/* Time */}
             <div>
               <Label htmlFor="reservationTime" className="sr-only">
                 Time
@@ -207,9 +194,9 @@ export default function ReserveTable() {
               <Select value={reservationTime} onValueChange={setTime} required>
                 <SelectTrigger
                   id="reservationTime"
-                  className="border-b border-t-0 border-l-0 border-r-0 border-gray-300 focus:border-primary focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none px-0 py-2 text-lg placeholder:text-gray-500"
+                  className="border-b border-t-0 border-l-0 border-r-0 border-gray-300 focus:border-primary focus-visible:ring-0 focus-visible:ring-offset-0 rounded-none px-0 py-2 text-md text-black"
                 >
-                  <SelectValue placeholder="Select a time" />
+                  <SelectValue placeholder="9:00 PM" />
                 </SelectTrigger>
                 <SelectContent>
                   {timeOptions.map((time) => (
