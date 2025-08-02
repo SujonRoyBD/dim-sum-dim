@@ -124,7 +124,7 @@ export default function ReserveTable() {
         />
       </div>
       <div className="w-full max-w-xl lg:w-1/2 pt-8">
-        <h2 className="font-cinzel text-4xl md:text-2xl font-bold mb-6 leading-tight text-gray-900">
+        <h2 className="font-cinzel text-3xl md:text-2xl font-bold mb-6 leading-tight text-gray-900">
           RESERVE YOUR TABLE FOR AN AUTHENTIC SUM DIM SUM EXPERIENCE
         </h2>
         <p className="text-gray-700 mb-8 text-lg">

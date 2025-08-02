@@ -2,7 +2,7 @@ import React from "react";
 import { GoArrowRight } from "react-icons/go";
 const DiveInto = () => {
   return (
-    <div className='bg-[url("/assets/devinto.png")] bg-cover bg-center text-white py-20 px-6'>
+    <div className='bg-[url("/assets/devinto.png")] bg-cover md:h-[500px] bg-center text-white py-20 px-6'>
       <div className="max-w-3xl mx-auto text-center">
         <h2 className="font-cinzel text-3xl md:text-3xl font-bold leading-snug mb-6 uppercase">
           Dive Into the World of Sumptuous <br /> Sum Dim Sum

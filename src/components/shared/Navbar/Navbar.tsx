@@ -13,16 +13,16 @@ import { MenuIcon } from "lucide-react"
 export default function Navbar() {
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
+    { name: "About", href: "#" },
     { name: "Menu & Locations", href: "#" },
     { name: "Reservation", href: "#" },
     { name: "Merchandise", href: "#" },
     { name: "Career", href: "#" },
-    { name: "Contact", href: "#" },
+    { name: "Contact", href: "#contact-us" },
   ]
 
   return (
-    <header className=" bg-[#0C0C0C]  sticky top-10 z-50 text-white py-4 px-6 md:px-8 lg:px-12">
+    <header className=" bg-[#0C0C0C]  sticky top-11 z-20 text-white py-4 px-6 md:px-8 lg:px-12">
       <nav className="flex items-center justify-between max-w-7xl mx-auto">
         <Link href="/" className="flex flex-col items-center gap-1">
           <Image

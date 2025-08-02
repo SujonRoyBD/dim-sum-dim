@@ -56,7 +56,7 @@ export default function ContactUs() {
   };
 
   return (
-    <Card className="w-full container mx-auto rounded-xl overflow-hidden">
+    <Card id="contact-us" className="w-full container mx-auto rounded-xl overflow-hidden">
       <div className="grid grid-cols-1 container md:grid-cols-1 lg:grid-cols-2 ">
         <div className="relative p-8 md:p-12 flex flex-col justify-center items-start text-white">
           <Image

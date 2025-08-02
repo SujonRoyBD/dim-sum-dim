@@ -48,7 +48,7 @@ const TalkTown = () => {
 
   return (
     <div className="relative">
-      <div className="text-center pt-[120px] px-4">
+      <div className="text-center md:pt-[80px] pt-16 lg:pt-[100px] px-4">
         <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold uppercase">
           The Talk of the Town
         </h3>
