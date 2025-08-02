@@ -14,16 +14,16 @@ const slides = [
   },
   {
     id: 2,
-    image: "/assets/blue.jpg",
-    text: `Sum Dim Sum delivers flavors that spark joy. From the first bite to the last,
+    image: "/assets/devinto.png",
+    text: ` simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. From the first bite to the last,
     it’s a flavorful journey through Asian cuisine that never fails to impress.
     A truly memorable culinary destination.`,
   },
     {
     id: 1,
-    image: "/assets/food.jpg",
-    text: `Sum Dim Sum is more than just a restaurant—it’s an experience that transports
-    you to the heart of Asian culinary tradition. Each bite is a harmonious blend of
+    image: "/assets/devinto.png",
+    text: ` just a restaurant—it’s an experience that transports
+    you to the heart of Asian culinary tradition. Each bite is a harmonious blend of  simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
     flavor, ...`,
   },
 ];

@@ -111,7 +111,7 @@ export default function ReserveTable() {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center min-h-screen p-4 md:p-8 lg:p-12 bg-white">
+    <div id="reservetion" className="flex flex-col lg:flex-row items-center lg:items-start justify-center min-h-screen p-4 md:p-8 lg:p-12 bg-white">
       <div className="relative w-full  aspect-[2/3] lg:aspect-auto 
      h-[350px] md:h-[500px] mt-4 lg:h-[500px] rounded-xl overflow-hidden mb-8 lg:mb-0 lg:mr-12 lg:w-[600px]">
         <Image
